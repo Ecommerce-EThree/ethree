@@ -6,6 +6,7 @@ import Imports from "unplugin-auto-import/vite";
 import PurgeCSS from "rollup-plugin-purgecss";
 import Unhead from "@unhead/addons/vite";
 import { unheadVueComposablesImports } from "@unhead/vue";
+import VueRouter from 'unplugin-vue-router/vite'
 
 export default defineConfig({
     plugins: [
@@ -22,10 +23,10 @@ export default defineConfig({
          *
          * @see https://uvr.esm.is/rfcs/data-loaders/
          */
-        // VueRouter({
-        //     routesFolder: "resources/js/pages",
-        //     dts: "./types/router.d.ts",
-        // }),
+        VueRouter({
+            routesFolder: "resources/js/pages",
+            dts: "./resources/types/router.d.ts",
+        }),
 
         /**
          * plugin-vue plugin inject vue library and allow sfc files to work (*.vue)
@@ -54,7 +55,7 @@ export default defineConfig({
          * @see https://github.com/antfu/unplugin-auto-import
          */
         Imports({
-            dts: "./resources/types/imports.d.ts",
+            dts: "resources/types/imports.d.ts",
             imports: [
                 "vue",
                 "@vueuse/core",
@@ -113,7 +114,7 @@ export default defineConfig({
             },
         }),
         laravel({
-            input: "resources/js/app.ts",
+            input: "resources/js/app.js",
             refresh: true,
         }),
         // vue({

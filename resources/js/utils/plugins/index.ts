@@ -1,6 +1,8 @@
 import type { Pinia } from 'pinia'
+import { App } from 'vue'
 
 export interface VueroAppContext {
+  app: App,
   pinia: Pinia
 }
 export type VueroPlugin = (vuero: VueroAppContext) => void | Promise<void>
