@@ -1,8 +1,13 @@
-<script setup lang="ts">
-import type { SideblockItem } from '/@src/components/layouts/sideblock/sideblock.types'
+<script setup>
 
-const links = ref<SideblockItem[]>([
+const links = ref([
   {
+    type: 'link',
+    label: 'Dashboard',
+    icon: 'lucide:grid',
+    to: '/app',
+  },
+   {
     type: 'link',
     label: 'Dashboard',
     icon: 'lucide:grid',

@@ -1,20 +1,12 @@
-<script setup lang="ts">
-interface VAccordionProps {
-  items: {
-    title: string
-    content: string
-  }[]
-  openItems?: number[]
-  exclusive?: boolean
-}
+<script setup>
 
-const props = withDefaults(defineProps<VAccordionProps>(), {
+const props = defineProps>( {
   items: () => [],
   openItems: () => [],
 })
 
 const internalOpenItems = ref(props.openItems)
-const toggle = (key: number) => {
+const toggle = (key) => {
   const wasOpen = internalOpenItems.value.includes(key)
 
   if (props.exclusive) {

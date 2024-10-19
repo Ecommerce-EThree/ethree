@@ -1,24 +1,4 @@
-<script setup lang="ts">
-import Layout from '/@src/layouts/sideblock.vue'
-
-definePage({
-  meta: {
-    requiresAuth: true
-  }
-})
-
-useHead({
-  meta: [
-    {
-      name: 'robots',
-      content: 'noindex',
-    },
-  ],
-})
+<script setup>
 </script>
 
-<template>
-  <Layout>
-    <RouterView />
-  </Layout>
-</template>
+<template>dawdawdawd</template>

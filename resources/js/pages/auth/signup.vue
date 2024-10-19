@@ -1,13 +1,11 @@
-<script setup lang="ts">
+<script setup>
+
 const router = useRouter()
 
 const handleSignup = async () => {
   router.push('/auth')
 }
 
-useHead({
-  title: 'Signup',
-})
 </script>
 
 <template>

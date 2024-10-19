@@ -1,22 +1,11 @@
-<script setup lang="ts">
-export interface VAccordionImageItem {
-  title: string
-  content: string
-  image: string
-}
-export interface VAccordionImageEmits {
-  (e: 'select', key: string | number): void
-}
-export interface VAccordionImageProps {
-  items: VAccordionImageItem[]
-}
+<script setup>
 
-const emit = defineEmits<VAccordionImageEmits>()
-const props = withDefaults(defineProps<VAccordionImageProps>(), {
+const emit = defineEmits()
+const props = defineProps( {
   items: () => [],
 })
 
-const toggle = (key: number) => {
+const toggle = (key) => {
   emit('select', key)
 }
 </script>
