@@ -1,4 +1,4 @@
-<script setup generic="T extends unknown">
+<script setup lang="ts" generic="T extends unknown">
 export type VAnimatedCheckboxColor =
   | 'primary'
   | 'info'

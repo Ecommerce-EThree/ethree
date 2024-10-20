@@ -210,7 +210,7 @@ watch(
             :open="activeSubsidebar && isDesktopSidebarOpen"
             @toggle="isDesktopSidebarOpen = !isDesktopSidebarOpen"
           >
-            {{ pageTitle }}
+            <span>{{ pageTitle }}</span>
 
             <template #toolbar>
               <slot
@@ -232,7 +232,7 @@ watch(
               :open="activeSubsidebar && isDesktopSidebarOpen"
               @toggle="isDesktopSidebarOpen = !isDesktopSidebarOpen"
             >
-              {{ pageTitle }}
+              <span>{{ pageTitle }}</span>
 
               <template #toolbar>
                 <slot

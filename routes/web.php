@@ -9,7 +9,7 @@ use Inertia\Inertia;
 Route::get('/', [AuthenticatedSessionController::class, 'create']);
 
 Route::get('/app', function () {
-    return Inertia::render('app');
+    return Inertia::render('auth/login');
 })->name('dashboard');
 
 Route::middleware('auth')->group(function () {

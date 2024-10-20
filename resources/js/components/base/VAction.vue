@@ -1,8 +1,16 @@
-<script setup>
-import { RouteLocationAsString } from 'unplugin-vue-router'
+<script setup lang="ts">
+import { type RouteLocationAsString } from 'unplugin-vue-router'
 
+export type VActionDark = '1' | '2' | '3' | '4' | '5' | '6'
+export interface VActionProps {
+  to?: RouteLocationAsString
+  dark?: VActionDark
+  active?: boolean
+  rounded?: boolean
+  grey?: boolean
+}
 
-const props = defineProps( {
+const props = withDefaults(defineProps<VActionProps>(), {
   to: undefined,
   dark: undefined,
 })

@@ -10,8 +10,10 @@ export function useVueroContext<T>(
 ): Ref<T | null> {
   const context = inject(injectionKey)
 
+  console.log('context:', context)
+
   if (!context) {
-    throw new Error('useVueroContext() was called without having vuero-context plugin installed.')
+    //throw new Error('useVueroContext() was called without having vuero-context plugin installed.')
   }
 
   const state = toRef(context, key)

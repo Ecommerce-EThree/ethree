@@ -18,7 +18,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): Response
     {
-        return Inertia::render('auth/index');
+        return Inertia::render('sidebar/dashboards/index');
     }
 
     /**
